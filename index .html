@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus || Connect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+       
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Essential for responsive design */
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-width: 320px; /* Prevents layout issues on extremely small screens */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to right, rgb(17, 18, 32), rgb(72, 73, 129));
+    align-items: center;
+    padding: 15px 10px;
+    position: relative;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(17, 18, 32);
+    height: auto; /* Allow height to adjust */
+}
+
+.logo h1 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 0; 
+}
+.menu-toggle {
+    display: block; 
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 100; /* Ensure it's on top */
+}
+.navlink {
+    display: none;
+    position: absolute;
+    top: 100%;
+    flex-direction: column; /* Stack links vertically on small screens */
+    gap: 10px;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 0;
+    width: 100%;
+    background: black;
+    z-index: 90;
+}
+
+.navlink a {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.navlink a:hover {
+    background-color: rgb(84, 89, 138);
+}
+
+.hero {
+    min-height: 400px; /* Reduced height for better mobile viewing */
+    background-image: url(./ak\ side\ pa\ design.avif); /* Use your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero h4 {
+    font-size: 1em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#button1 {
+    font-size: 1.2em;
+    border-radius: 40px;
+    padding: 10px 30px;
+    background: linear-gradient(to right, rgb(16, 16, 122), rgb(116, 116, 206));
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#button1:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgb(161, 161, 161);
+}
+
+.section2 {
+    padding: 40px 15px;
+    background-color: rgb(250, 246, 246);
+    height: auto;
+}
+
+.div1 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 0; /* Reset margin */
+}
+
+.h12 {
+    color: black;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.h42 {
+    color: black;
+    font-size: 0.9em;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    height: auto;
+    width: 100%;
+    max-width: 350px; /* Max width for better spacing on larger mobiles */
+    padding: 20px;
+    border-radius: 15px; /* Reduced border radius */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background-color: white;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(107, 107, 107, 0.5);
+}
+
+.icon1, .icon2, .icon3 {
+    font-size: 40px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.icon1 {
+    background-color: rgb(229, 229, 255);
+    color: blue;
+}
+
+.icon2 {
+    color: rgb(174, 13, 206);
+    background-color: rgb(252, 227, 255);
+}
+
+.icon3 {
+    color: rgb(75, 219, 75);
+    background-color: rgb(235, 255, 235);
+}
+
+.cardh3, .cardh4, .cardh5 {
+    font-size: 1.5em;
+    padding: 0; /* Remove unnecessary padding */
+    text-align: center;
+}
+
+.card h5 {
+    padding: 10px 10px 0;
+    font-size: 0.9em;
+    color: rgb(120, 120, 120);
+}
+
+.section3 {
+    padding: 40px 15px;
+    height: auto;
+}
+
+.h13 {
+    color: black;
+    font-size: 2em;
+    text-align: center;
+    margin: 0 0 30px 0; /* Centered title */
+}
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card2 {
+    min-width: 300px;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0px 5px 10px rgba(119, 119, 119, 0.5);
+    border-radius: 20px;
+    overflow: hidden; /* To contain the image's border radius */
+    margin: 0; /* Reset margin */
+}
+
+.img-box {
+    position: relative;
+}
+
+.img-box img {
+    width: 100%;
+    height: 200px; /* Consistent image height */
+    object-fit: cover;
+    display: block;
+    border-radius: 0; /* Radius already applied on card2 */
+}
+
+.buttonimgbox {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 15px;
+    padding: 3px 10px;
+    background: linear-gradient(to right, rgb(14, 15, 82), rgb(55, 85, 184));
+    border: none;
+    color: white;
+    font-size: 0.8em;
+}
+
+.fav {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(43, 42, 42, 0.7);
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 1.2em;
+}
+
+.h32 {
+    padding: 15px 15px 0 15px;
+    font-size: 1.2em;
+}
+
+.month {
+    display: flex;
+    gap: 5px;
+    padding: 5px 15px 0 15px;
+    font-size: 0.9em;
+    align-items: baseline;
+}
+
+.subh4 {
+    color: rgb(82, 82, 223);
+}
+
+.smaltext {
+    color: rgb(114, 114, 114);
+}
+
+.p2, .p2sub {
+    color: rgb(80, 80, 80);
+    padding: 10px 15px 15px 15px;
+    font-size: 0.9em;
+}
+
+.button2 {
+    display: block;
+    width: 80%; /* Takes up most of the card width */
+    margin: 15px auto 20px auto; /* Centered and spaced */
+    padding: 10px 0;
+    font-size: 1em;
+    color: rgb(15, 15, 255);
+    background: rgb(244, 244, 255);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease, rgb(121, 120, 120) ;
+}
+
+.button2:hover {
+    background: linear-gradient(to right, rgb(2, 1, 44), rgb(35, 35, 167));
+    color: white;
+}
+
+.section4 {
+    padding: 40px 15px;
+    height: auto;
+    background-color: rgb(240, 245, 250);
+    text-align: center;
+}
+
+.section4h3 {
+    font-size: 2em;
+    padding-top: 0;
+    margin-bottom: 10px;
+}
+
+.section4p {
+    padding-top: 0;
+    font-size: 0.9em;
+    margin-bottom: 30px;
+}
+
+.cardcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card3 {
+    height: auto;
+    min-width: unset;
+    max-width: 300px; /* Max width on larger screens */
+    width: 100%;
+    background-color: white;
+    margin-top: 0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.mycusicon, .mycusicon1, .mycusicon2 {
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+
+.mycusicon { color: blue; }
+.mycusicon1 { color: rgb(127, 80, 201); }
+.mycusicon2 { color: rgb(66, 221, 45); }
+
+.card3 h2 {
+    font-size: 1.2em;
+}
+
+.section5 {
+    padding: 40px 15px;
+    height: auto;
+}
+
+.section5h3 {
+    text-align: center;
+    padding-top: 0;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.section5container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card4 {
+    margin-top: 0;
+    position: relative;
+    border-radius: 13px;
+    height: auto;
+    min-width: unset;
+    max-width: 450px;
+    width: 100%;
+    background-color: rgb(248, 247, 247);
+    padding-bottom: 15px; /* Add padding for content */
+    margin-left: 0; /* Reset margin */
+}
+
+.card4p {
+    padding: 20px 20px 70px 20px; /* Increased bottom padding to make space for profile info */
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.prp {
+    min-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px; /* Positioned relative to the bottom */
+    left: 20px;
+    object-fit: cover;
+}
+
+.minidiv {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 90px;
+    padding-top: 0;
+    font-size: 1em;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+}
+
+.name {
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+   /* padding-bottom: 40px; */
+}
+
+.minih3 {
+    font-size: 0.8em;
+    color: rgb(68, 68, 68);
+    font-weight: normal;
+    padding-bottom: 20px;
+}
+
+.section6 {
+    padding: 50px 15px;
+    height: auto;
+    background: linear-gradient(to right, rgb(6, 6, 34), rgb(8, 8, 102));
+    text-align: center;
+}
+
+.sec6div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 0;
+    gap: 10px;
+}
+
+.sec6div h1 {
+    font-size: 2em;
+    color: white;
+}
+
+.myh3 {
+    color: rgb(228, 226, 226);
+    font-size: 1em;
+    max-width: 600px;
+}
+
+.mybutton {
+    color: rgb(7, 7, 255);
+    background-color: white;
+    font-size: 1em;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mybutton:hover {
+    background-color: rgb(219, 226, 238);
+}
+
+footer {
+    background-color: rgb(6, 6, 54);
+    height: auto;
+    padding-top: 30px;
+}
+
+.containerf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 15px 40px 15px;
+    border-bottom: 1px solid rgb(118, 127, 139);
+    height: auto;
+}
+
+.footerdiv2, .footerdiv3, .footerdiv4, .footerdiv5 {
+    padding: 20px 0;
+    margin: 0;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.footerdiv2 {
+    /* order: -1; Place the logo/description first */
+    text-align: left;
+}
+.footerdiv3, .footerdiv4, .footerdiv5 {
+    text-align: left;
+}
+
+.footerdiv2 h1 {
+    font-size: 1.5em;
+    padding-left: 0;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footerp {
+    padding-left: 0;
+    font-size: 0.9em;
+    min-width: unset;
+    color: white;
+}
+
+.footerh2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(147, 147, 207);
+    padding-bottom: 5px;
+    width: fit-content;
+    
+}
+
+.footerdiv3, .footerdiv4, .footerdiv5 {
+    padding-left: 0;
+    margin-top: 0;
+    gap: 5px;
+    color: white;
+}
+
+.twinlink {
+    font-size: 0.9em;
+    padding: 5px 0;
+}
+.twinlink:hover{
+    color: rgb(87, 87, 255);
+}
+.footercouple {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.fottericon1, .fottericon2, .fottericon3 {
+    font-size: 1.2em;
+    margin-right: 10px;
+    padding-top: 0;
+}
+.fottericon1 { 
+    align-self: flex-start; 
+    padding-top: 5px;
+    padding-left: 3px;
+    color: rgb(53, 53, 240);
+}
+.fottericon2 { 
+    align-self: flex-start; 
+    color: rgb(53, 53, 240);
+}
+
+.fottericon3 {
+     align-self: flex-start; 
+     color: rgb(53, 53, 240);
+    }
+
+.fotterp, .fotterp2, .fotterp3 {
+    font-size: 0.9em;
+    min-width: unset;
+    padding: 0;
+    margin-top: 0;
+}
+.fotterp { 
+    padding-top: 0;
+    padding-left:6px ;
+ }
+.fotterp2 {
+     padding-top: 0;
+     }
+.fotterp3 {
+    padding-top: 0; 
+}
+
+
+.fotterp4 {
+    font-size: 0.9em;
+    padding-top: 5px;
+    min-width: unset;
+}
+
+.fottersignupbutton {
+    font-size: 1em;
+    padding: 5px 20px;
+    margin-top: 10px;
+    border-radius: 15px;
+    color: white;
+    background-color: rgb(66, 66, 243);
+    border: none;
+}
+.fottersignupbutton:hover{
+    
+    background-color:  rgb(41, 41, 212);
+}
+.containerf2 {
+    border-top: none;
+    padding: 20px 15px;
+    text-align:left;
+    color: white;
+}
+
+.footerdiv6 {
+    border-top: none;
+    position: static;
+    text-align: left;
+}
+
+.fotterp5 {
+    position: static;
+    font-size: 0.8em;
+    min-width: unset;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.fottericon4 {
+    position: static;
+    justify-content:center;
+    gap: 15px;
+}
+
+.facebook, .tiktok, .insta {
+    padding: 8px;
+    font-size: 1.2em;
+    color: white;
+}
+.facebook:hover{
+    color: rgb(50, 50, 255);
+}
+.tiktok:hover{
+    color: black;
+}
+.insta:hover{
+    color:rgb(247, 20, 88);
+}
+
+@media (min-width: 768px) {
+    /* Navigation Bar */
+    nav {
+        flex-direction: row;
+        height: 70px; /* Restore original height */
+        padding: 15px 40px;
+        justify-content: space-between;
+    }
+
+    .logo h1 {
+        padding-left: 0;
+    }
+    .menu-toggle {
+        display: none; /* Hide the icon on desktop */
+    }
+    .navlink {
+        flex-direction: row;
+        gap: 40px;
+        padding: 0;
+        width: auto;
+        margin-right: 0;
+       display: flex;
+       position: static;
+       background: none;
+    }
+    
+    /* Hero Section */
+    .hero {
+        min-height: 580px;
+        max-height: 580px;
+    }
+
+    .hero h1 {
+        font-size: 3em;
+    }
+
+    .hero h4 {
+        font-size: 1.2em;
+    }
+
+    /* Section 2 */
+    .section2 {
+        padding: 60px 20px;
+    }
+
+    .h12 {
+        font-size: 2em;
+    }
+    .container {
+        gap: 40px;
+    }
+
+    .card {
+        max-width: 450px;
+        padding: 30px;
+    }
+    
+    /* Section 3 */
+    .section3 {
+        padding: 60px 20px;
+        height: 830px;
+    }
+    
+    .h13 {
+        font-size: 2em;
+        margin: 0 0 70px 0;
+        text-align: center;
+    }
+    
+    .container2 {
+        gap: 40px;
+    }
+
+    .card2 {
+        min-width: 400px;
+        max-width: 400px;
+    }
+    
+    .button2 {
+        margin-left: 98px;
+        padding: 5px 50px;
+        width: auto;
+    }
+
+    /* Section 4 */
+    .section4 {
+        height: 480px;
+    }
+
+    .section4h3 {
+        font-size: 35px;
+        padding-top: 80px;
+    }
+    
+    .cardcontainer {
+        gap: 40px;
+    }
+
+    .card3 {
+        min-width: 300px; /* Reduced min-width */
+        max-width: 450px;
+    }
+
+    /* Section 5 */
+    .section5 {
+        height: 490px;
+    }
+
+    .section5h3 {
+        padding-top: 90px;
+        font-size: 35px;
+    }
+
+    .section5container {
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .card4 {
+        min-width: 400px;
+        max-width: 480px;
+        height: 200px;
+        margin-left: 0;
+    }
+
+    .card4p {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    .prp {
+        /* top: 50px; */
+        min-width: 70px;
+        height: 70px;
+    }
+
+    .minidiv {
+        padding-left: 120px;
+        padding-top: 0px;
+        top: 120px;
+        left: 0;
+    }
+    
+    /* Section 6 */
+    .section6 {
+        height: 400px;
+    }
+    .sec6div {
+        padding-top: 100px;
+    }
+
+    /* Footer */
+    footer {
+        height: auto;
+    }
+    
+    .containerf {
+        flex-wrap: nowrap;
+        height: auto;
+        padding-left:20px 50px 40px 50px;
+       
+    }
+
+    .footerdiv2 {
+        margin-top: 50px;
+        text-align: left;
+        order: 0;
+        color: white;
+        width: auto;
+        max-width: 300px;
+    }
+    
+    .footerp {
+        padding-left: 6px;
+        /* min-width: 430px; */
+        max-width: 100%;
+    }
+
+    .footerdiv3 {
+        padding-left:20px;
+        margin-top: 50px;
+        width: auto;
+        max-width: 300px;
+        color: white;
+    }
+
+    .footerdiv4 {
+        padding-left: 20px;
+        margin-top: 50px;
+        width: auto;
+        max-width: 300px;
+        color: white;
+    }
+
+    .footerdiv5 {
+        margin-top: 50px;
+        padding-left: 20px;
+        width: auto;
+        max-width: 300px;
+        color: white;
+    }
+    
+    .containerf2 {
+        padding: 20px 50px;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* position: relative; */
+        border-top: 1px solid rgb(109, 118, 126);
+    }
+    
+    /* .fotterp5 {
+        position:static;
+        /* top: 590px; */
+        /* right: 1100px; */
+        /* min-width: 500px; */
+        /* margin-bottom: 0;
+        color: white; */
+    /* }  */ 
+
+    /* .fottericon4 {
+        position: static;
+        top: 580px;
+        right: 200px;
+     } 
+     */
+    .footerdiv6 {
+        border-top:none;
+        color: white;
+       
+    }
+}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1>CampusConnect</h1>
+        </div>
+        <i class="fa-solid fa-bars menu-toggle" id="menuToggle"></i>
+        <div class="navlink">
+
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Events</a>
+            <a href="">Gallery</a>
+            <a href="">Feedback</a>
+            <a href="">Contact</a>
+
+        </div>
+    </nav>
+    <section class="hero">
+        <h1>Welcome to Techfest 2025!</h1>
+        <h4>The biggest technical festival of the year is here. Are you ready to innovate? </h4>
+        <button id="button1">Explore Tech Events</button>
+    </section>
+    <section class="section2">
+        <div class="div1">
+            <h1 class="h12">Explore Events by Category</h1>
+            <h4 class="h42">Find the perfect event to match your interests, from tech challenges to cultural
+                celebrations.</h4>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="icon1"><i class="fa-solid fa-code" style="color: blue;"></i></div>
+                <h3 class="cardh3">Technical</h3>
+                <h5>Hackathons, workshops and tech talks to sharpen your skill</h5>
+            </div>
+            <div class="card">
+                <div class="icon2"><i class="fa-solid fa-music"></i></div>
+                <h3 class="cardh4">Cultural</h3>
+                <h5>Celebrate diversity with music, dance art and festival events.</h5>
+            </div>
+            <div class="card">
+                <div class="icon3"><i class="fa-solid fa-trophy"></i></div>
+                <h3 class="cardh5">Sports</h3>
+                <h5>Compete and cheer at inter-college tournaments and matches.</h5>
+            </div>
+        </div>
+    </section>
+    <section class="section3">
+        <h1 class="h13">Don't Miss Out: Upcomming Highlights</h1>
+
+
+
+        <div class="container2">
+            <div class="card2">
+
+                <div class="img-box"><img src="./blood donation.jpeg" alt="">
+                    <i class="fa-regular fa-bookmark fav"></i>
+                    <button class="buttonimgbox">Social</button>
+                </div>
+                <div class="blooddonation">
+                    <h3 class="h32">Blood Donation Drive</h3>
+                    <div class="month">
+                        <h4 class="subh4">Dec 1</h4> |
+                        <p class="smaltext">Campus Health Centre</p>
+                    </div>
+                    <p class="p2">Give the gift of life. A single donation can save up to three lives. Your
+                        participation is
+                        invaluable.</p>
+                </div>
+                <button class="button2">Learn More</button>
+            </div>
+
+
+            <div class="card2">
+
+                <div class="img-box"><img src="./drama festival.jpeg" alt="">
+                    <i class="fa-regular fa-bookmark fav"></i>
+                    <button class="buttonimgbox">Cultural</button>
+                </div>
+
+                <h3 class="h32">Drama Festival: Stagecraft</h3>
+                <div class="month">
+                    <h4 class="subh4">Dec 15</h4> |
+                    <p class="smaltext">Main Auditorium</p>
+                </div>
+                <p class="p2sub">A show case of theatrical talent with a series of short plays and skits performed by
+                    the drama club...</p>
+                <button class="button2">Learn More</button>
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="section4">
+        <div class="subsec4">
+            <h3 class="section4h3">Campus life at a Glance</h3>
+            <p class="section4p">Our campus is a thriving ecosystem of learning, creativity and community</p>
+        </div>
+        <div class="cardcontainer">
+            <div class="card3">
+                <h1 class="mycusicon">0+</h1>
+                <h2>Events Anually</h2>
+            </div>
+
+            <div class="card3">
+                <h1 class="mycusicon1">0+</h1>
+                <h2>Students Club</h2>
+            </div>
+
+            <div class="card3">
+                <h1 class="mycusicon2">0+</h1>
+                <h2>Active Participants</h2>
+            </div>
+        </div>
+    </section>
+    <section class="section5">
+        <div>
+            <h3 class="section5h3">What Our Community Says</h3>
+        </div>
+        <div class="section5container">
+            <div class="card4">
+                <p class="card4p">"Campusconnect completely changed how I find events. I discovered the coding club
+                    through it and it's been the best part of my college life!"</p>
+                <div class="minidiv">
+                    <img src="./bara sa face.webp" class="prp" alt="">
+                    <div>
+                        <h2 class="name">Laiba Sheikh</h2>
+                        <h3 class="minih3">B.Tech,Computer Science</h3>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card4">
+                <p class="card4p">"As a faculty member, promoting our department's symposium was never easier. The
+                    platform is intuitive and reaches every student instantly."
+                </p>
+                <div class="minidiv">
+                    <img src="./drsajid.webp" class="prp" alt="">
+                    <div>
+                        <h2 class="name">Dr.Sajid Ali Khan</h2>
+                        <h3 class="minih3">Professor, Mechenical Engg</h3>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card4">
+                <p class="card4p">"The gallery from the Annual Fest is amazing! It's so great to have all these memories
+                    in one place. The UI is clean and fast."</p>
+                <div class="minidiv">
+                    <img src="./horor neha baji.webp" class="prp" alt="">
+                    <div>
+                        <h2 class="name">Neha</h2>
+                        <h3 class="minih3">B.A, Humanities</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="section6">
+        <div class="sec6div">
+            <h1 class="myh1">Ready to Dive In?</h1>
+            <h3 class="myh3">Explore the full calender of events, find your passion and become an active part of our
+                vibrant community.</h3>
+            <button class="mybutton"><b>Explore All Events</b></button>
+        </div>
+    </section>
+    <footer>
+        <div class="containerf">
+            <div class="footerdiv2">
+                <h1>CampusConnect</h1>
+                <p class="footerp">Your lauchpad into the world of technology. Stay updated with our latest events
+                    courses ad campus news.</p>
+            </div>
+            <div class="footerdiv3">
+                <h2 class="footerh2">Explore</h2>
+                <h2 class="twinlink">About Us</h2>
+                <h2 class="twinlink">All Event</h2>
+                <h2 class="twinlink">Gallery</h2>
+                <h2 class="twinlink">Contact</h2>
+            </div>
+            <div class="footerdiv4">
+                <h2 class="footerh2">Get in Touch</h2>
+                <div class="footercouple"><i class="fa-solid fa-location-dot fottericon1"></i>
+                    <p class="fotterp">Shahrah-e-Faisal Rd, near star gate, Karachi, Pakistan.</p>
+                </div>
+                <div class="footercouple"><i class="fa-solid fa-envelope fottericon2"></i>
+                    <p class="fotterp2">stargate@aptech-education.com</p>
+                </div>
+                <div class="footercouple"><i class="fa-solid fa-phone fottericon3"></i>
+                    <p class="fotterp3">(021) 123-4565</p>
+                </div>
+            </div>
+            <div class="footerdiv5">
+                <h2 class="footerh2">Stay Updated</h2>
+                <p class="fotterp4">Subcribe to our newsletter for the latest updates.</p>
+                <button class="fottersignupbutton">Sign Up</button>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="containerf2">
+            <div class="footerdiv6">
+
+                <p class="fotterp5">2025 Aptech Metro Star Gate. All right Reserved</p>
+                <div class="fottericon4">
+                    <i class="fa-brands fa-facebook facebook"></i>
+                    <i class="fa-brands fa-tiktok tiktok"></i>
+                    <i class="fa-brands fa-instagram insta"></i>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
